@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-24T04:29:53.311Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="PXVwBAkS6grCX-RkidXb" version="14.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-24T04:36:40.229Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="4ZexBaIYshRUzZNHk0-z" version="14.0.4" type="github">
   <diagram id="puR8bFH_dAUYSolfHmQK" name="Page-1">
     <mxGraphModel dx="1013" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#09555B" math="0" shadow="0">
       <root>
@@ -46,7 +46,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="63Jptf02z77UDxQiLoMV-12" value="Home | My Portal | Logout&amp;nbsp;&amp;nbsp;" style="whiteSpace=wrap;html=1;align=right;fillColor=#B1DDF0;strokeColor=#BAC8D3;fontColor=#182E3E;" vertex="1" parent="1">
-          <mxGeometry x="50" y="750" width="760" height="60" as="geometry" />
+          <mxGeometry x="35" y="750" width="760" height="60" as="geometry" />
         </mxCell>
         <mxCell id="63Jptf02z77UDxQiLoMV-13" value="SafelyRent" style="whiteSpace=wrap;html=1;fillColor=#B1DDF0;strokeColor=#BAC8D3;fontStyle=1;fontSize=20;fontColor=#182E3E;" vertex="1" parent="1">
           <mxGeometry x="50" y="750" width="210" height="60" as="geometry" />
