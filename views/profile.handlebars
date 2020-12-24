@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create New Topic:</h3>
+
+<div>
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label for="tenant-name">Blog Topic:</label>
+        <input class="form-input" type="text" id="tenant-name" name="tenant-name" />
+      </div>
+      <div class="form-group">
+        <label for="tenant-desc">Comment:</label>
+        <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
+      </div>
+{{!-- // if time lets do a like/dislike section --}}
+      <div class="form-group">
+        <label for="tenant-funding">My Rating</label>
+        <input class="form-input" type="number" id="tenant-funding" name="tenant-funding" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+<br>
+<br>
+<br>
+
+  {{#if tenants.length}}
+  <div class="col-md-12 tenant-list">
+    <h3>My Comments:</h3>
+
+    {{#each tenants as |tenant|}}
+    <div class="row mb-6">
+      <div class="col-md-6">
+        <h4><a href="/tenant/{{tenant.id}}"> {{tenant.name}} </a></h4>
+        <p>{{description}}</p>
+      </div>
+      <div class="col-md-6">
+         <button class="btn btn-sm btn-info" data-id="{{tenant.id}}"> Update </button> 
+        <button class="btn btn-sm btn-danger" data-id="{{tenant.id}}">Remove</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+</div>
+
+<script src="./js/tenant.js"></script>
