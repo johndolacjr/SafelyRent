@@ -1,6 +1,17 @@
+<h2>List of Tenants</h2>
+{{#each tenant}}
+
 <div class="text-center">
-    <h2>{{name}}</h2>
+    <h2>{{tenantName}}</h2>
+    <p>{{tenantUsername}}</p>
+    <p>{{tenantAddress}}</p>
+    <p>{{paymentTimlinessScore}}</p>
+    <p>{{cleanlinessScore}}</p>
+    <p>{{propertyUpkeepScore}}</p>
+    <p>{{communicationScore}}</p>
+    <p>{{friendlinessScore}}</p>
     {{!-- <p>{{{get_emoji}}}</p> --}}
-    <p>{{description}}</p>
-    <p>Posted by {{user.name}} on {{format_date date_created}}</p>
+    {{!-- <p>{{description}}</p>
+    <p>Posted by {{user.name}} on {{format_date date_created}}</p> --}}
 </div>
+{{/each}}
