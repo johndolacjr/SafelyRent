@@ -18,6 +18,32 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.get('/test', withAuth, async (req,res) => {
+  res.render('tenant', {tenant: [{
+    tenantName: "Randy",
+    tenantUsername: "RandyCoolGuy",
+    tenantAddress: "1000 Main St",
+    paymentTimlinessScore: 4.5,
+    cleanlinessScore: 4.7,
+    propertyUpkeepScore: 4,
+    communicationScore: 5,
+    friendlinessScore: 5,
+  }, 
+
+  {
+    tenantName: "John",
+    tenantUsername: "JohnCoolGuy",
+    tenantAddress: "2000 Main St",
+    paymentTimlinessScore: 4.5,
+    cleanlinessScore: 4.7,
+    propertyUpkeepScore: 4,
+    communicationScore: 5,
+    friendlinessScore: 5,
+  }
+
+]})
+} )
+
 // router.delete('/:id', withAuth, async (req, res) => {
 //   try {
 //     const projectData = await Project.destroy({
