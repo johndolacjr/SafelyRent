@@ -1,0 +1,29 @@
+.company-name {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkcyan;
+    font-size: xx-large;
+}
+.company-blurb {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+
+.form-group,
+.col-md-6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+#login-section {
+    text-align: left;
+} 
+
+#create-section {
+    text-align: inherit;
+} 
+#login,
+#create {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
