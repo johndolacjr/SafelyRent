@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
-// require('tailwindcss').config();
+
 
 let sequelize;
 
@@ -20,6 +20,3 @@ if (process.env.JAWSDB_URL) {
 }
 
 module.exports = sequelize;
-// module.exports = {
-//   darkMode: 'media'
-// }
