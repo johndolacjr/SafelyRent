@@ -5,10 +5,10 @@ const newFormHandler = async (event) => {
     // const tenant_rating = document.querySelector('#tenant-rating').value.trim();
     const description = document.querySelector('#tenant-desc').value.trim();
   
-    // if (name && tenant_rating && description) {
-    //   const response = await fetch(`/api/??????"projects"`, {
+    if (name && tenant_rating && description) {
+      const response = await fetch(`/api/??????"projects"`, {
         method: 'POST',
-        // body: JSON.stringify({ name, tenant_rating, description }),
+        body: JSON.stringify({ name, tenant_rating, description }),
         headers: {
           'Content-Type': 'application/json',
         },
