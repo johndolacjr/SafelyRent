@@ -10,13 +10,13 @@
 
 <body>
 
-{{!-- push company-name to the right using CSS --}}
   <div class="flex-column justify-space-around">
     <header class="display-right justify-space-between align-center p-2">
       <nav>
+		  <h1 class="company-name">SafelyRent</h1>
       <a>
-        <span role="img" aria-label="money"></span>
-        <a href="/">My Tenants</a> |
+        {{!-- <span role="img" aria-label="money"></span> --}}
+        <a href="/" >My Tenants</a> |
       </a>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
@@ -25,7 +25,6 @@
         {{else}}
         <a href="/login">Login</a>
         {{/if}}
-		<h1 class="company-name">SafelyRent</h1>
       </nav>
     </header>
     <main class="container container-fluid mt-5">
@@ -33,7 +32,6 @@
       {{{ body }}}
     </main>
     <footer>
-      
     </footer>
   </div>
 </p>
