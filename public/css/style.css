@@ -1,3 +1,6 @@
+.tenant-rating {
+    float: right;
+}
 .company-name {
     font-family: Arial, Helvetica, sans-serif;
     color: teal;
@@ -50,6 +53,20 @@ form .form-input {
     border-radius: 0;
   }
 
+  .no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #1b89bc;
+    text-decoration: none;
+    font-size: 100%;
+  }
+  
+  .no-button:hover {
+    color: #065b83;
+    text-decoration: underline;
+  }
 .btn {
     text-align: center;
     display: flex;
