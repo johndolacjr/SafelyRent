@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
+// require('tailwindcss').config();
 
 let sequelize;
 
