@@ -6,7 +6,7 @@
 
 <div>
   <div class="create-tenant">
-    <div class="row mt-4">
+    <div class="row mt-6">
       <div class="col-md-6">
         <h3>Create New Tenant:</h3>
         <br>
@@ -28,32 +28,34 @@
     </div>
 
     <div class="tenant-rating">
-      <div class="row mt-4">
+      <div class="row mt-6">
         <div class="col-md-6">
           <h3>Tenant Rating:</h3>
           <form class="form new-tenant-form">
             <div class="form-group">
-              <label for="tenant-rating">Payment Timliness Score:</label>
+              <label for="tenant-rating">Payment Timliness Score</label>
               <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
             </div>
             <div class="form-group">
-              <label for="tenant-rating">Cleanliness Score:</label>
+              <label for="tenant-rating">Cleanliness Score</label>
               <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
             </div>
             <div class="form-group">
-              <label for="tenant-rating">Property Upkeep Score:</label>
+              <label for="tenant-rating">Property Upkeep Score</label>
               <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
             </div>
             <div class="form-group">
-              <label for="tenant-rating">Communication Score:</label>
+              <label for="tenant-rating">Communication Score</label>
               <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
             </div>
             <div class="form-group">
-              <label for="tenant-rating">Friendliness Score:</label>
+              <label for="tenant-rating">Friendliness Score</label>
               <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="form-group">
               <button type="submit" id="main_update" class="btn btn-primary">Update</button>
             </div>
           </form>
@@ -65,12 +67,12 @@
         <h3>Manage my Tenants:</h3>
 
         {{#each tenants as |tenant|}}
-        <div class="row mb-2">
-          <div class="col-md-8">
+        <div class="row mb-6">
+          <div class="col-md-6">
             <h4><a href="/tenant/{{tenant.id}}"> {{tenant.name}} </a></h4>
             <p>{{description}}</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <button class="btn btn-sm btn-update" data-id="{{tenant.id}}">Update</button>
             <br>
             <button class="btn btn-sm btn-remove" data-id="{{tenant.id}}">Remove</button>
