@@ -4,75 +4,82 @@
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create New Tenant:</h3>
-
 <div>
-    <form class="form new-tenant-form">
-      <div class="form-group">
-        <label for="tenant-name">Tenant Name: </label>
-        <input class="form-input" type="text" id="tenant-name" name="tenant-name" />
-      </div>
-      <div class="form-group">
-        <label for="tenant-desc">Tenant Username:</label>
-        <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="tenant-desc">Tenant Address:</label>
-        <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="tenant-funding">Payment Timliness Score</label>
-        <input class="form-input" type="number" id="tenant-funding" name="tenant-funding" />
-      </div>
-      <div class="form-group">
-        <label for="tenant-funding">Cleanliness Score</label>
-        <input class="form-input" type="number" id="tenant-funding" name="tenant-funding" />
-      </div>
-      <div class="form-group">
-        <label for="tenant-funding">Property Upkeep Score</label>
-        <input class="form-input" type="number" id="tenant-funding" name="tenant-funding" />
-      </div>
-      <div class="form-group">
-        <label for="tenant-funding">Communication Score</label>
-        <input class="form-input" type="number" id="tenant-funding" name="tenant-funding" />
-      </div>
-      <div class="form-group">
-        <label for="tenant-funding">Friendliness Score</label>
-        <input class="form-input" type="number" id="tenant-funding" name="tenant-funding" />
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-            <div class="form-group">
-        <button type="submit" id="main_update" class="btn btn-primary">Update</button>
-      </div>
-    </form>
-  </div>
-<br>
-<br>
-<br>
-
-  {{#if tenants.length}}
-  <div class="col-md-12 tenant-list">
-    <h3>Manage my Tenants:</h3>
-
-    {{#each tenants as |tenant|}}
-    <div class="row mb-6">
+  <div class="create-tenant">
+    <div class="row mt-4">
       <div class="col-md-6">
-        <h4><a href="/tenant/{{tenant.id}}"> {{tenant.name}} </a></h4>
-        <p>{{description}}</p>
-      </div>
-      <div class="col-md-6">
-         <button class="btn btn-sm btn-info" data-id="{{tenant.id}}">Update</button> 
-        <button class="btn btn-sm btn-danger" data-id="{{tenant.id}}">Remove</button>
+        <h3>Create New Tenant:</h3>
+        <br>
+        <form class="form new-tenant-form">
+          <div class="form-group">
+            <label for="tenant-name">Tenant Name: </label>
+            <input class="form-input" type="text" id="tenant-name" name="tenant-name" />
+          </div>
+          <div class="form-group">
+            <label for="tenant-desc">Tenant Username:</label>
+            <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="tenant-desc">Tenant Address:</label>
+            <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
+          </div>
+        </form>
       </div>
     </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
-</div>
 
-<script src="./js/tenant.js"></script>
+    <div class="tenant-rating">
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <h3>Tenant Rating:</h3>
+          <form class="form new-tenant-form">
+            <div class="form-group">
+              <label for="tenant-rating">Payment Timliness Score:</label>
+              <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
+            </div>
+            <div class="form-group">
+              <label for="tenant-rating">Cleanliness Score:</label>
+              <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
+            </div>
+            <div class="form-group">
+              <label for="tenant-rating">Property Upkeep Score:</label>
+              <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
+            </div>
+            <div class="form-group">
+              <label for="tenant-rating">Communication Score:</label>
+              <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
+            </div>
+            <div class="form-group">
+              <label for="tenant-rating">Friendliness Score:</label>
+              <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" id="main_update" class="btn btn-primary">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+      {{#if tenants.length}}
+      <div class="col-md-12 tenant-list">
+        <h3>Manage my Tenants:</h3>
+
+        {{#each tenants as |tenant|}}
+        <div class="row mb-2">
+          <div class="col-md-8">
+            <h4><a href="/tenant/{{tenant.id}}"> {{tenant.name}} </a></h4>
+            <p>{{description}}</p>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-sm btn-update" data-id="{{tenant.id}}">Update</button>
+            <br>
+            <button class="btn btn-sm btn-remove" data-id="{{tenant.id}}">Remove</button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+    </div>
+  </div>
+
+  <script src="./js/tenant.js"></script>

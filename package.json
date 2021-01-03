@@ -21,7 +21,7 @@
     "express-sessions": "^1.0.6",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5",
-    "sessions": "0.0.2-7"
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
