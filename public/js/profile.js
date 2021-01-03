@@ -48,6 +48,14 @@ if (document.querySelector('.tenant-list') !== null) {
     .addEventListener('click', delButtonHandler);
 }
 
+var logID = 'log',
+  log = $('<div id="'+logID+'"></div>');
+$('body').append(log);
+  $('[type*="radio"]').change(function () {
+    var me = $(this);
+    log.html(me.attr('value'));
+  });
+
 
 // document.querySelector("#example-form").addEventListener("submit", function(event) {
 //   event.preventDefault();

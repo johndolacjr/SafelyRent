@@ -2,19 +2,24 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities"; */
 
+body {
+    background: #333;
+    color: rgb(9, 211, 211);
+  }
+
 .tenant-rating {
     margin: justify;
 }
 .company-name {
     font-family: Arial, Helvetica, sans-serif;
-    color: teal;
+    color: rgb(9, 211, 211);
     font-size: xx-large;
 }
 .company-blurb {
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     text-align: center;
-    color: teal;
+    color: rgb(9, 211, 211);
 }
 
 .form-group,
@@ -205,3 +210,5 @@ form .form-input {
   .card.card-rounded .card-header {
     border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
   }
+
+  /* star rating */
