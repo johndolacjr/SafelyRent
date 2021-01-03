@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.1.0",
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
@@ -20,6 +21,7 @@
     "express-session": "^1.17.1",
     "express-sessions": "^1.0.6",
     "mysql2": "^2.2.5",
+    "postcss": "^8.2.2",
     "sequelize": "^6.3.5",
     "tailwindcss": "^2.0.2"
   },
