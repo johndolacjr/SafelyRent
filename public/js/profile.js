@@ -1,48 +1,65 @@
 const newFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const name = document.querySelector('#tenant-name').value.trim();
-    const tenant_rating = document.querySelector('#tenant-rating').value.trim();
-    const description = document.querySelector('#tenant-desc').value.trim();
-  
-    if (name && tenant_rating && description) {
-      const response = await fetch(`/api/tenants`, {
-        method: 'POST',
-        body: JSON.stringify({ name, tenant_rating, description }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to create tenant');
-      }
+  event.preventDefault();
+
+  const name = document.querySelector('#tenant-name').value.trim();
+  const tenant_rating = document.querySelector('#tenant-rating').value.trim();
+  const description = document.querySelector('#tenant-desc').value.trim();
+
+  if (name && tenant_rating && description) {
+    const response = await fetch(`/api/tenants`, {
+      method: 'POST',
+      body: JSON.stringify({ name, tenant_rating, description }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to create tenant');
     }
-  };
-  
-  const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/tenants/${id}`, {
-        method: 'DELETE',
-      });
-  
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to delete tenant');
-      }
+  }
+};
+
+const delButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+
+    const response = await fetch(`/api/tenants/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to delete tenant');
     }
-  };
-  
-  document
-    .querySelector('.new-tenant-form')
-    .addEventListener('submit', newFormHandler);
-  
+  }
+};
+
+document
+  .querySelector('.new-tenant-form')
+  .addEventListener('submit', newFormHandler);
+
+if (document.querySelector('.tenant-list') !== null) {
   document
     .querySelector('.tenant-list')
     .addEventListener('click', delButtonHandler);
-  
+}
+
+
+// document.querySelector("#example-form").addEventListener("submit", function(event) {
+//   event.preventDefault();
+
+//   const exampleInput = document.querySelector("#example-input").value;
+//   fetch("/api/tenants/pogo-stick", {
+//     method: 'POST',
+//       body: JSON.stringify({
+//         exampleInput: exampleInput
+//       }),
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//   })
+// })

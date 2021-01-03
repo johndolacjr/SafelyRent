@@ -3,13 +3,13 @@ const { Tenant } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
+  console.log(req.body);
   try {
     const newTenant = await Tenant.create({
-      ...req.body,
-      user_id: req.session.user_id,
-      name: req.session.name,
-      email: req.session.email,
-      rating: req.session.rating,
+      user_id: req.body.user_id,
+      name: req.body.name,
+      email: req.body.email,
+      rating: req.body.tenant_rating,
     });
 
     res.status(200).json(newTenant);
@@ -18,31 +18,33 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/test', withAuth, async (req,res) => {
-  res.render('tenant', {tenant: [{
-    tenantName: "Randy",
-    tenantUsername: "RandyCoolGuy",
-    tenantAddress: "1000 Main St",
-    paymentTimlinessScore: 4.5,
-    cleanlinessScore: 4.7,
-    propertyUpkeepScore: 4,
-    communicationScore: 5,
-    friendlinessScore: 5,
-  }, 
+router.get('/test', withAuth, async (req, res) => {
+  res.render('tenant', {
+    tenant: [{
+      tenantName: "Randy",
+      tenantUsername: "RandyCoolGuy",
+      tenantAddress: "1000 Main St",
+      paymentTimlinessScore: 4.5,
+      cleanlinessScore: 4.7,
+      propertyUpkeepScore: 4,
+      communicationScore: 5,
+      friendlinessScore: 5,
+    },
 
-  {
-    tenantName: "John",
-    tenantUsername: "JohnCoolGuy",
-    tenantAddress: "2000 Main St",
-    paymentTimlinessScore: 4.5,
-    cleanlinessScore: 4.7,
-    propertyUpkeepScore: 4,
-    communicationScore: 5,
-    friendlinessScore: 5,
-  }
+    {
+      tenantName: "John",
+      tenantUsername: "JohnCoolGuy",
+      tenantAddress: "2000 Main St",
+      paymentTimlinessScore: 4.5,
+      cleanlinessScore: 4.7,
+      propertyUpkeepScore: 4,
+      communicationScore: 5,
+      friendlinessScore: 5,
+    }
 
-]})
-} )
+    ]
+  })
+})
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
@@ -64,4 +66,7 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
+// router.post("/pogo-stick", withAuth, async (req, res) => {
+//   console.log(req.body);
+// })
 module.exports = router;
