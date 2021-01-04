@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all tenant and JOIN with user data
     const tenantData = await Tenant.findAll({
       include: [
         {
@@ -78,5 +78,6 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
 
 module.exports = router;
