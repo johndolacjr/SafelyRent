@@ -2,13 +2,19 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#tenant-name').value.trim();
-  const tenant_rating = document.querySelector('#tenant-rating').value.trim();
+  const userName = document.querySelector('#tenant-user').value.trim();
+  const address = document.querySelector('#tenant-address').value.trim();
+  const timeliness = document.querySelector('#tenant-timeliness').value.trim(); 
+  const cleanliness = document.querySelector('#tenant-cleanliness').value.trim();
+  const upkeep = document.querySelector('#tenant-upkeep').value.trim();
+  const communication = document.querySelector('#tenant-communication').value.trim();
+  const friendliness = document.querySelector('#tenant-friendliness').value.trim();
   const description = document.querySelector('#tenant-desc').value.trim();
 
-  if (name && tenant_rating && description) {
+  if (name && userName && address && timeliness && cleanliness && upkeep && communication && friendliness && description) {
     const response = await fetch(`/api/tenants`, {
       method: 'POST',
-      body: JSON.stringify({ name, tenant_rating, description }),
+      body: JSON.stringify({ name, userName, address, timeliness, cleanliness, upkeep, communication, friendliness, description }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -48,13 +54,13 @@ if (document.querySelector('.tenant-list') !== null) {
     .addEventListener('click', delButtonHandler);
 }
 
-var logID = 'log',
-  log = $('<div id="'+logID+'"></div>');
-$('body').append(log);
-  $('[type*="radio"]').change(function () {
-    var me = $(this);
-    log.html(me.attr('value'));
-  });
+// var logID = 'log',
+//   log = $('<div id="'+logID+'"></div>');
+// $('body').append(log);
+//   $('[type*="radio"]').change(function () {
+//     var me = $(this);
+//     log.html(me.attr('value'));
+//   });
 
 
 // document.querySelector("#example-form").addEventListener("submit", function(event) {
