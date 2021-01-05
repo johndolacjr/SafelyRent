@@ -1,12 +1,13 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
-
+  
   const name = document.querySelector('#tenant-name').value.trim();
+  // console.log(name);
   const tenant_rating = document.querySelector('#tenant-rating').value.trim();
   const description = document.querySelector('#tenant-desc').value.trim();
 
   if (name && tenant_rating && description) {
-    const response = await fetch(`/api/tenants`, {
+    const response = await fetch(`../api/tenants`, {
       method: 'POST',
       body: JSON.stringify({ name, tenant_rating, description }),
       headers: {
@@ -39,7 +40,7 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-tenant-form')
+  .querySelector('#new-tenant-form')
   .addEventListener('submit', newFormHandler);
 
 if (document.querySelector('.tenant-list') !== null) {
@@ -48,13 +49,13 @@ if (document.querySelector('.tenant-list') !== null) {
     .addEventListener('click', delButtonHandler);
 }
 
-var logID = 'log',
-  log = $('<div id="'+logID+'"></div>');
-$('body').append(log);
-  $('[type*="radio"]').change(function () {
-    var me = $(this);
-    log.html(me.attr('value'));
-  });
+// var logID = 'log',
+//   log = $('<div id="'+logID+'"></div>');
+// $('body').append(log);
+//   $('[type*="radio"]').change(function () {
+//     var me = $(this);
+//     log.html(me.attr('value'));
+//   });
 
 
 // document.querySelector("#example-form").addEventListener("submit", function(event) {

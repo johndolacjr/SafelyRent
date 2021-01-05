@@ -17,7 +17,7 @@ Tenant.init(
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     rating: {
       type: DataTypes.INTEGER,
