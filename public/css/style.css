@@ -1,207 +1,33 @@
-/* @import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities"; */
-
-.tenant-rating {
-    margin: justify;
+body {
+  background: #0b2b3a;
+  color: #54acd4;
 }
-.company-name {
-    font-family: Arial, Helvetica, sans-serif;
-    color: teal;
-    font-size: xx-large;
+body div {
+  background: #0b2b3a;
 }
-.company-blurb {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    text-align: center;
-    color: teal;
+body article {
+  background: #0b2b3a;
+  border: 1px solid #54acd4;
+  -webkit-border-radius: 10px;
+  -ms-border-raduis: 10px;
+  border-radius: 10px;
 }
 
-.form-group,
-.col-md-6 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+.error, .success {
+  border: 2px solid green;
+  padding: 30px;
 }
 
-#login,
-#create {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+.success {
+  background: green;
 }
 
-form .form-input,
-form .form-textarea {
-  display: block;
+.error {
+  background: red;
 }
 
-form .form-input {
-    width: 20%;
-    padding: 0.75rem;
-    color: #1a1a1a;
-    background-color: #ffffff;
-    margin: 0.625rem 0;
-    font-size: 1.2rem;
-    border: 1px solid #484848;
-    border-radius: 0.3rem;
-  }
-  
-  form .form-input.form-input-squared {
-    border-radius: 0;
-  }
+footer {
+  background: #0b2b3a;
+}
 
-  .no-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: #1b89bc;
-    text-decoration: none;
-    font-size: 100%;
-  }
-  
-  .no-button:hover {
-    color: #065b83;
-    text-decoration: underline;
-  }
-.btn {
-    text-align: center;
-    display: flex;
-    padding: 0.3rem 1.0rem;
-    margin: 0;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 0.3rem;
-    border: 1px solid transparent;
-    outline: none;
-    color: #1a1a1a;
-    background-color: #aeaeae;
-    transition: color 0.2s ease-in-out, 
-  }
-  
-  .btn:hover {
-    background-color: #cecece;
-  }
-  
-  .btn.btn-squared {
-    border-radius: 0;
-  }
-  
-  .btn.btn-sm {
-    font-size: .90rem;
-    padding: 0.3rem 0.9rem;
-  }
-  
-  .btn.btn-lg {
-    font-size: 1.25rem;
-    padding: 0.8rem 1.4rem;
-  }
-  
-  .btn.btn-block {
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
-  
-  .btn.btn-primary {
-    background-color: #2d3e50;
-    color: #d9e9e8;
-  }
-  
-  .btn.btn-primary:hover {
-    background-color: #57779a;
-  }
-  
-  .btn.btn-danger {
-    background-color: #e64c66;
-    color: #ffffff;
-  }
-  .btn.btn-danger {
-    background-color: #e64c66;
-    color: #ffffff;
-  }
-  
-  .btn.btn-danger:hover {
-    background-color: #ee8294;
-  }
-  
-  .btn.btn-info {
-    background-color: #1bbc9b;
-    color: #ffffff;
-  }
-  
-  .btn.btn-info:hover {
-    background-color: #31e1bd;
-  }
-  
-  .btn.btn-light {
-    background-color: #d9e9e8;
-    color: #1a1a1a;
-  }
-  
-  .btn.btn-light:hover {
-    background-color: #84b8b4;
-  }
-  
-  .btn.btn-dark {
-    background-color: #1a1a1a;
-    color: #d9e9e8;
-  }
-  
-  .btn.btn-dark:hover {
-    background-color: #5f5f5f;
-  }
-  
-  .btn.btn-white {
-    background-color: #ffffff;
-    color: #1a1a1a;
-  }
-  
-  .btn.btn-white:hover {
-    background-color: #cccccc;
-  }
-  
-  .btn.btn-black {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  
-  .btn.btn-black:hover {
-    background-color: #666666;
-  }
-  
-  .btn.btn-link {
-    background-color: #1b89bc;
-    color: #ffffff;
-  }
-  
-  .btn.btn-link:hover {
-    background-color: #31a9e1;
-  }
-  
-  .card {
-    border: 1px solid #1a1a1a;
-    margin-bottom: 1rem;
-  }
-  
-  .card .card-header {
-    padding: 0.375rem;
-    background-color: #2d3e50;
-    color: #d9e9e8;
-  }
-  
-  .card .card-body {
-    padding: 0.375rem;
-  }
-  
-  .card .card-footer {
-    border-top: 1px solid #1a1a1a;
-    padding: 0.375rem;
-  }
-  
-  .card.card-rounded {
-    border-radius: 0.3rem;
-  }
-  
-  .card.card-rounded .card-header {
-    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
-  }
+/*# sourceMappingURL=style.css.map */
