@@ -26,20 +26,18 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-router.get('/tenant/:id', async (req, res) => {
+router.get('/user/tenants', async (req, res) => {
   try {
-    const tenantData = await Tenant.findByPk(req.params.id, {
+    const tenantData = await User.findByPk(req.session.user_id, {
       include: [
         {
-          model: User,
-          attributes: ['name'],
+          model: Tenant,
         },
       ],
     });
 
     const tenant = tenantData.get({ plain: true });
-
+      console.log(tenant)
     res.render('tenant', {
       ...tenant,
       logged_in: req.session.logged_in

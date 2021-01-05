@@ -10,7 +10,7 @@
       <div class="col-md-6">
         <h3>Create New Tenant:</h3>
         <br>
-        <form class="form new-tenant-form">
+        {{!-- <form class="form new-tenant-form" >
           <div class="form-group">
             <label for="tenant-name">Tenant Name: </label>
             <input class="form-input" type="text" id="tenant-name" name="tenant-name" />
@@ -23,15 +23,29 @@
             <label for="tenant-desc">Tenant Address:</label>
             <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
           </div>
-        </form>
+        </form> --}}
       </div>
     </div>
 
     <div class="tenant-rating">
       <div class="row mt-6">
         <div class="col-md-6">
+          
           <h3>Tenant Rating:</h3>
-          <form class="form new-tenant-form">
+          <form class="form new-tenant-form" id="new-tenant-form">
+            {{!-- copy and pasted for testing --}}
+             <div class="form-group">
+            <label for="tenant-name">Tenant Name: </label>
+            <input class="form-input" type="text" id="tenant-name" name="tenant-name" />
+          </div>
+          <div class="form-group">
+            <label for="tenant-desc">Tenant Username:</label>
+            <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="tenant-desc">Tenant Address:</label>
+            <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
+          </div>
             <div class="form-group">
               <label for="tenant-rating">Payment Timliness Score:</label>
               <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
