@@ -3,18 +3,20 @@ const newFormHandler = async (event) => {
 
   const name = document.querySelector('#tenant-name').value.trim();
   const userName = document.querySelector('#tenant-user').value.trim();
-  const address = document.querySelector('#tenant-address').value.trim();
-  const timeliness = document.querySelector('#tenant-timeliness').value.trim(); 
-  const cleanliness = document.querySelector('#tenant-cleanliness').value.trim();
-  const upkeep = document.querySelector('#tenant-upkeep').value.trim();
-  const communication = document.querySelector('#tenant-communication').value.trim();
-  const friendliness = document.querySelector('#tenant-friendliness').value.trim();
+  // const address = document.querySelector('#tenant-address').value.trim();
+  // const timeliness = document.querySelector('#tenant-timeliness').value.trim(); 
+  // const cleanliness = document.querySelector('#tenant-cleanliness').value.trim();
+  // const upkeep = document.querySelector('#tenant-upkeep').value.trim();
+  // const communication = document.querySelector('#tenant-communication').value.trim();
+  // const friendliness = document.querySelector('#tenant-friendliness').value.trim();
   const description = document.querySelector('#tenant-desc').value.trim();
 
-  if (name && userName && address && timeliness && cleanliness && upkeep && communication && friendliness && description) {
+  // address && timeliness && cleanliness && upkeep && communication && friendliness && 
+  if (name && userName && description) {
     const response = await fetch(`/api/tenants`, {
       method: 'POST',
-      body: JSON.stringify({ name, userName, address, timeliness, cleanliness, upkeep, communication, friendliness, description }),
+      // address, timeliness, cleanliness, upkeep, communication, friendliness, 
+      body: JSON.stringify({ name, userName, description }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -54,6 +56,7 @@ if (document.querySelector('.tenant-list') !== null) {
     .addEventListener('click', delButtonHandler);
 }
 
+//Log Id's for star voting 
 // var logID = 'log',
 //   log = $('<div id="'+logID+'"></div>');
 // $('body').append(log);
