@@ -8,8 +8,9 @@ router.post('/', withAuth, async (req, res) => {
     const newTenant = await Tenant.create({
       user_id:req.session.user_id,
       name: req.body.name,
-      email: "a", //todo replace with user email
+      email: "", //todo replace with user email
       rating: req.body.tenant_rating,
+
     }); 
     res.status(200).json(newTenant);
   } catch (err) {
