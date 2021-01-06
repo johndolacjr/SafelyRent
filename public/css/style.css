@@ -3,6 +3,7 @@ header {
   background-color: #cf1212;
   text-align: center;
 }
+
 body {
   background: #07222e;
   color: #72c2e7;
@@ -17,3 +18,8 @@ body article {
   -ms-border-raduis: 10px;
   border-radius: 10px;
 }
+
+}
+
+/*# sourceMappingURL=style.css.map */
+
