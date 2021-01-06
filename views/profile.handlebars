@@ -3,7 +3,6 @@
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
-
 <div>
   <div class="create-tenant">
     <div class="row mt-6">
@@ -16,29 +15,6 @@
             <input class="form-input" type="text" id="tenant-name" name="tenant-name" />
           </div>
           <div class="form-group">
-            <label for="tenant-user">Tenant Username:</label>
-            <textarea class="form-input" id="tenant-user" name="tenant-user"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="tenant-address">Tenant Address:</label>
-            <textarea class="form-input" id="tenant-address" name="tenant-address"></textarea>
-          </div>
-        </form> --}}
-      </div>
-    </div>
-
-    <div class="tenant-rating">
-      <div class="row mt-6">
-        <div class="col-md-6">
-          
-          <h3>Tenant Rating:</h3>
-          <form class="form new-tenant-form" id="new-tenant-form">
-            {{!-- copy and pasted for testing --}}
-             <div class="form-group">
-            <label for="tenant-name">Tenant Name: </label>
-            <input class="form-input" type="text" id="tenant-name" name="tenant-name" />
-          </div>
-          <div class="form-group">
             <label for="tenant-desc">Tenant Username:</label>
             <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
           </div>
@@ -46,27 +22,48 @@
             <label for="tenant-desc">Tenant Address:</label>
             <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
           </div>
+        </form> --}}
+      </div>
+    </div>
+    <div class="tenant-rating">
+      <div class="row mt-6">
+        <div class="col-md-6">
+          <h3>Tenant Rating:</h3>
+          <form class="form new-tenant-form" id="new-tenant-form">
+            {{!-- copy and pasted for testing --}}
+             <div class="form-group">
+            <label for="tenant-name">Tenant Name: </label>
+            <input class="form-input" type="text" id="tenant-name" name="tenant-name" />
+          </div>
+          {{!-- <div class="form-group">
+            <label for="tenant-desc">Tenant Username:</label>
+            <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
+          </div> --}}
+          <div class="form-group">
+            <label for="tenant-desc">Tenant Address:</label>
+            <textarea class="form-input" id="tenant-desc" name="tenant-desc"></textarea>
+          </div>
             <div class="form-group">
-              <label for="tenant-timeliness">Payment Timliness Score:</label>
-              <input class="form-input" type="number" id="tenant-timeliness" name="tenant-timeliness" />
+              <label for="tenant-rating">Tenant Rating:</label>
+              <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
+            </div>
+            {{!-- <div class="form-group">
+              <label for="tenant-rating">Cleanliness Score:</label>
+              <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
             </div>
             <div class="form-group">
-              <label for="tenant-cleanliness">Cleanliness Score:</label>
-              <input class="form-input" type="number" id="tenant-cleanliness" name="tenant-cleanliness" />
+              <label for="tenant-rating">Property Upkeep Score:</label>
+              <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
             </div>
             <div class="form-group">
-              <label for="tenant-upkeep">Property Upkeep Score:</label>
-              <input class="form-input" type="number" id="tenant-upkeep" name="tenant-upkeep" />
+              <label for="tenant-rating">Communication Score:</label>
+              <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
             </div>
             <div class="form-group">
-              <label for="tenant-communication">Communication Score:</label>
-              <input class="form-input" type="number" id="tenant-communication" name="tenant-communication" />
+              <label for="tenant-rating">Friendliness Score:</label>
+              <input class="form-input" type="number" id="tenant-rating" name="tenant-rating" />
             </div>
-            <div class="form-group">
-              <label for="tenant-friendliness">Friendliness Score:</label>
-              <input class="form-input" type="number" id="tenant-friendliness" name="tenant-friendliness" />
-            </div>
-            <div class="form-group">
+            <div class="form-group"> --}}
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
             <br>
@@ -80,7 +77,6 @@
       {{#if tenants.length}}
       <div class="col-md-12 tenant-list">
         <h3>Manage my Tenants:</h3>
-
         {{#each tenants as |tenant|}}
         <div class="row mb-6">
           <div class="col-md-6">
@@ -98,11 +94,9 @@
       {{/if}}
     </div>
   </div>
-
   {{!-- <form id="example-form">
     <label for="example-input">Example</label>
     <input id="example-input" type="text" />
     <button type="submit">Submit</button>
   </form> --}}
-  
   <script src="./js/profile.js"></script>
