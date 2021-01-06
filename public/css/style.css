@@ -1,33 +1,22 @@
+header {
+  color: #4f1fd3;
+  background-color: #cf1212;
+  text-align: center;
+}
+
 body {
-  background: #0b2b3a;
-  color: #54acd4;
+  background: #07222e;
+  color: #72c2e7;
 }
 body div {
-  background: #0b2b3a;
+  background: #07222e;
 }
 body article {
-  background: #0b2b3a;
-  border: 1px solid #54acd4;
+  background: #07222e;
+  border: 1px solid #72c2e7;
   -webkit-border-radius: 10px;
   -ms-border-raduis: 10px;
   border-radius: 10px;
-}
-
-.error, .success {
-  border: 2px solid green;
-  padding: 30px;
-}
-
-.success {
-  background: green;
-}
-
-.error {
-  background: red;
-}
-
-footer {
-  background: #0b2b3a;
 }
 
 /*# sourceMappingURL=style.css.map */
