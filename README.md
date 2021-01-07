@@ -36,7 +36,7 @@
     Logan Coates
    
 # Live Link
-    https://placeholder21.herokuapp.com/ 
+    https://pure-mesa-60058.herokuapp.com/
 
 # GitHub Repo
     https://github.com/johndolacjr/SafelyRent.git 
