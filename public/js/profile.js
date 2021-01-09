@@ -4,13 +4,18 @@ const newFormHandler = async (event) => {
   const name = document.querySelector('#tenant-name').value.trim();
   // console.log(name);
   const tenant_rating = document.querySelector('#tenant-rating').value.trim();
+  const paymentTimlinessScore = document.querySelector('#tenant-time').value.trim();
+  const cleanlinessScore = document.querySelector('#tenant-clean').value.trim();
+  const propertyUpkeepScore = document.querySelector('#tenant-upkeep').value.trim();
+  const communicationScore = document.querySelector('#tenant-communicate').value.trim();
+  const friendlinessScore = document.querySelector('#tenant-friend').value.trim();
   const description = document.querySelector('#tenant-desc').value.trim();
 
-  if (name && tenant_rating && description) {
+  if (name && tenant_rating && paymentTimlinessScore && cleanlinessScore && propertyUpkeepScore && communicationScore && friendlinessScore && description) {
     const response = await fetch(`../api/tenants`, {
       method: 'POST',
        
-      body: JSON.stringify({ name, tenant_rating, description }),
+      body: JSON.stringify({ name, tenant_rating, paymentTimlinessScore, cleanlinessScore, propertyUpkeepScore, communicationScore, friendlinessScore, description }),
       headers: {
         'Content-Type': 'application/json',
       },
