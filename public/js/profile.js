@@ -14,7 +14,6 @@ const newFormHandler = async (event) => {
   if (name && tenant_rating && paymentTimlinessScore && cleanlinessScore && propertyUpkeepScore && communicationScore && friendlinessScore && description) {
     const response = await fetch(`../api/tenants`, {
       method: 'POST',
-       
       body: JSON.stringify({ name, tenant_rating, paymentTimlinessScore, cleanlinessScore, propertyUpkeepScore, communicationScore, friendlinessScore, description }),
       headers: {
         'Content-Type': 'application/json',
