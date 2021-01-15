@@ -1,23 +1,37 @@
 header {
-  color: #4f1fd3;
-  background-color: #cf1212;
+  color: #07222e;
+  background-color: #98dbe4;
   text-align: center;
+  border: 1px solid #07222e;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 body {
-  background: #07222e;
-  color: #72c2e7;
+  background: #106a70;
+  color: #07222e;
 }
 body div {
-  background: #07222e;
+  background: #98dbe4;
 }
-body article {
-  background: #07222e;
-  border: 1px solid #72c2e7;
-  -webkit-border-radius: 10px;
-  -ms-border-raduis: 10px;
-  border-radius: 10px;
+body h2 {
+  background: #98dbe4;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+body h3 {
+  background: #98dbe4;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+body form {
+  background: #98dbe4;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
-
