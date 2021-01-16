@@ -30,6 +30,10 @@ Tenant.init(
         key: 'id',
       },
     },
+    date_created: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    }
   },
   {
     sequelize,
