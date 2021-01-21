@@ -10,7 +10,7 @@ router.post('/', withAuth, async (req, res) => {
       name: req.body.name,
       email: "", //todo replace with user email
       rating: req.body.tenant_rating,
-      date_created: Date.now()
+      // date_created: Date.now()
     }); 
     res.status(200).json(newTenant);
   } catch (err) {
