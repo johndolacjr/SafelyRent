@@ -51,4 +51,4 @@
     Logan Coates: 
         email: 
 
-![](images/)
+![](images/safely-rent.png)
