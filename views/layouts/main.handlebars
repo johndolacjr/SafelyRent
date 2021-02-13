@@ -13,28 +13,31 @@
   <div class="flex-column justify-space-around">
     <header class="p-2 display-right justify-space-between align-center">
       <nav>
-		  <h1 class="company-name">SafelyRent</h1>
-      <a class="nav-options">
-        {{!-- <span role="img" aria-label="money"></span> --}}
-        <a href="user/tenants" >My Tenants</a> |
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">Tenant Management</a> |
-        <button class="no-button" id="logout">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
+        <h1 class="company-name">SafelyRent</h1>
+        <a class="nav-options">
+
+          {{!-- <span role="img" aria-label="money"></span> --}}
+          <a href="user/tenants">My Tenants</a> |
+
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+          <a href="/profile">Tenant Management</a> |
+          <a href="no-button" id="logout">Logout</a>
+          {{else}}
+          <a href="/login">Login</a>
+          {{/if}}
       </nav>
     </header>
     <main class="container mt-5 container-fluid">
+
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
     </footer>
   </div>
-</p>
-</div>
+  </p>
+  </div>
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
